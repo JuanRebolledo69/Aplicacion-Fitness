@@ -9,7 +9,6 @@
     <ion-label> Bienvenido </ion-label>
     <ion-text> {{ nombreUsuario }} </ion-text>
   </ion-item>
-  <ion-button> Rutinas </ion-button>
-  <ion-button> Seguimiento </ion-button>
-  <ion-button> Contador Kcal </ion-button>
+  <ion-button (click)="irRutina()"> Rutina </ion-button>
+  <ion-button (click)="irContador()"> Contador </ion-button>
 </ion-content>

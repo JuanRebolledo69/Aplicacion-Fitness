@@ -19,26 +19,29 @@ const routes: Routes = [
     path: 'perfil',
     loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
   },
-  {
-    path: 'registro',
-    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
-  },
+  
   {
     path: 'cal-imc',
     loadChildren: () => import('./pages/cal-imc/cal-imc.module').then( m => m.CalImcPageModule)
   },
   {
-    path: 'seg-kcals',
-    loadChildren: () => import('./pages/seg-kcals/seg-kcals.module').then( m => m.SegKcalsPageModule)
+    path: 'ayuda',
+    loadChildren: () => import('./pages/ayuda/ayuda.module').then( m => m.AyudaPageModule)
   },
   {
-    path: 'rutina',
-    loadChildren: () => import('./pages/rutina/rutina.module').then( m => m.RutinaPageModule)
+    path: 'contador-calorias',
+    loadChildren: () => import('./pages/contador-calorias/contador-calorias.module').then( m => m.ContadorCaloriasPageModule)
   },
   {
-    path: 'contacto',
-    loadChildren: () => import('./pages/contacto/contacto.module').then( m => m.ContactoPageModule)
+    path: 'recomendacion-rutina',
+    loadChildren: () => import('./pages/recomendacion-rutina/recomendacion-rutina.module').then( m => m.RecomendacionRutinaPageModule)
   },
+  {
+    path: 'rutinas',
+    loadChildren: () => import('./pages/rutinas/rutinas.module').then( m => m.RutinasPageModule)
+  },
+
+
 ];
 
 @NgModule({
