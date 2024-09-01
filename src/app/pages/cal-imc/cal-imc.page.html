@@ -10,24 +10,35 @@
   <ion-item>
     <ion-label size="3">Altura (CM): </ion-label>
     <ion-col size="9">
-      <ion-input type="number" placeholder="Ingrese su altura"></ion-input>
+      <ion-input [(ngModel)]="altura" type="number" placeholder="Ingrese su altura"></ion-input>
     </ion-col>
   </ion-item>
 
   <ion-item>
     <ion-label size="3">Peso (KG): </ion-label>
     <ion-col size="9">
-      <ion-input type="number" placeholder="Ingrese su peso"></ion-input>
+      <ion-input [(ngModel)]="peso" type="number" placeholder="Ingrese su peso"></ion-input>
     </ion-col>
   </ion-item>
 
   <ion-item>
-    <ion-button>Calcular IMC</ion-button>
+    <ion-label> Genero </ion-label>
+    <ion-select [(ngModel)]="generoSeleccionado">
+      <ion-select-option value="masculino">Masculino</ion-select-option>
+      <ion-select-option value="femenino">Femenino</ion-select-option>
+    </ion-select>
   </ion-item>
-  <br>
 
   <ion-item>
-    <ion-label>Su IMC es: </ion-label>
+    <ion-label size="3"> Edad </ion-label>
+    <ion-col size="9">
+      <ion-input [(ngModel)]="edad" type="number" aria-placeholder="coloque edad en años"></ion-input>
+    </ion-col>
+  </ion-item>
+  <br>
+  
+  <ion-item>
+    <ion-button (click)="ingresar()">Ingresar</ion-button>
   </ion-item>
 
 
