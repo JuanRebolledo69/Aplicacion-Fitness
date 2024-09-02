@@ -11,12 +11,6 @@ export class LoginPage implements OnInit {
 
   constructor( private router: Router) { }
 
-  ingresar() {
-    localStorage.setItem('nombreUsuario', this.nombre);
-
-    this.router.navigate(['/cal-imc'])
-  }
-
   ngOnInit() {
   }
 

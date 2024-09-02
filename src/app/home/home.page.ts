@@ -19,8 +19,12 @@ export class HomePage implements OnInit {
     this.router.navigate(['/contador-calorias'])
   }
 
-  ngOnInit() {
-    this.nombreUsuario= localStorage.getItem('nombreUsuario') || '';
+  irIMC() {
+    this.router.navigate(['/cal-imc'])
   }
+
+  ngOnInit() {
+  }
+  
 
 }

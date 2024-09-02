@@ -5,12 +5,13 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-item>
-    <ion-label>Nombre de Usuario</ion-label>
+  <ion-item class="form-container">
+    <ion-label class="lab-nombre" position="stacked">Nombre de Usuario</ion-label>
     <ion-input [(ngModel)]="nombre" type="text" placeholder="Ingrese su Nombre"></ion-input>
   </ion-item>
   <br>
-  <ion-item>
-    <ion-button (click)="ingresar()">Ingresar</ion-button>
-  </ion-item>
+    <ion-button class="btn-siguiente" expand="block" shape="round" color="light" [routerLink]="'/home'">
+      <ion-icon slot="start" name="chevron-forward"></ion-icon>
+    </ion-button>
+
 </ion-content>

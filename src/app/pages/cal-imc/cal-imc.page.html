@@ -1,45 +1,42 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>cal-imc</ion-title>
+    <ion-title>Datos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <h2> Calcule su IMC </h2>
 
+<ion-content padding>
   <ion-item>
-    <ion-label size="3">Altura (CM): </ion-label>
-    <ion-col size="9">
-      <ion-input [(ngModel)]="altura" type="number" placeholder="Ingrese su altura"></ion-input>
-    </ion-col>
-  </ion-item>
-
-  <ion-item>
-    <ion-label size="3">Peso (KG): </ion-label>
-    <ion-col size="9">
-      <ion-input [(ngModel)]="peso" type="number" placeholder="Ingrese su peso"></ion-input>
-    </ion-col>
-  </ion-item>
-
-  <ion-item>
-    <ion-label> Genero </ion-label>
-    <ion-select [(ngModel)]="generoSeleccionado">
-      <ion-select-option value="masculino">Masculino</ion-select-option>
-      <ion-select-option value="femenino">Femenino</ion-select-option>
-    </ion-select>
-  </ion-item>
-
-  <ion-item>
-    <ion-label size="3"> Edad </ion-label>
-    <ion-col size="9">
-      <ion-input [(ngModel)]="edad" type="number" aria-placeholder="coloque edad en años"></ion-input>
-    </ion-col>
-  </ion-item>
-  <br>
-  
-  <ion-item>
-    <ion-button (click)="ingresar()">Ingresar</ion-button>
+    <ion-label position="floating">Altura (cm)</ion-label>
+    <ion-input type="number" [(ngModel)]="altura"></ion-input>
   </ion-item>
 
 
+  <ion-item>
+    <ion-label position="floating">Peso (kg)</ion-label>
+    <ion-input type="number" [(ngModel)]="peso"></ion-input>
+  </ion-item>
+
+
+
+  <div class="btn-imc">
+    <ion-button color="light" expand="full" (click)="calcularIMC()">Calcular IMC</ion-button>
+  </div>
+
+
+  <ion-card *ngIf="imc !== null">
+    <ion-card-header>
+      <ion-card-title>Resultado</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Tu IMC es: {{ imc | number:'1.2-2' }}</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
+<ion-footer class="btn-volver">
+  <ion-button color="light" [routerLink]="'/home'" >Volver</ion-button>
+</ion-footer>
+
+
+

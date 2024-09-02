@@ -6,7 +6,9 @@
           <ion-icon name="close"></ion-icon>
         </ion-button>
       </ion-buttons>
-      <ion-title>Menu</ion-title>
+      <ion-title>
+        <img src="assets/img/logo.png" alt="Logo" class="logo">
+        Menu</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
@@ -17,9 +19,14 @@
         <ion-label>Inicio</ion-label>
       </ion-item>
 
-      <ion-item [routerDirection]="'root'" [routerLink]="'/perfil'" (click)="navigateTo('/perfil')">
+      <ion-item [routerDirection]="'root'" [routerLink]="'/perfil'" (click)="irPerfil()">
         <ion-icon slot="start" name="person-outline"></ion-icon>
         <ion-label>Mi Perfil</ion-label>
+      </ion-item>
+
+      <ion-item [routerDirection]="'root'" [routerLink]="'/perfil'" (click)="navigateTo('/cal-imc')">
+        <ion-icon slot="start" name="calculator-outline"></ion-icon>
+        <ion-label>Calcular IMC</ion-label>
       </ion-item>
 
       <ion-item [routerDirection]="'root'" [routerLink]="'/cal-imc'" (click)="navigateTo('/recomendacion-rutina')">
@@ -43,10 +50,12 @@
         <ion-label>Contacto</ion-label>
       </ion-item>
 
-      <ion-item [routerDirection]="'root'" [routerLink]="''" (click)="navigateTo('/')">
-        <ion-icon slot="start" name="power-outline"></ion-icon>
-        <ion-label>Cerrar Sesion</ion-label>
-      </ion-item>
+      <div class="menu-footer">
+        <ion-item [routerDirection]="'root'" [routerLink]="''" (click)="navigateTo('/')">
+          <ion-icon slot="start" name="power-outline"></ion-icon>
+          <ion-label>Cerrar Sesion</ion-label>
+        </ion-item>
+      </div>
 
     </ion-list>
   </ion-content>

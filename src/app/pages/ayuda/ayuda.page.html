@@ -25,13 +25,21 @@
       <ion-textarea [(ngModel)]="mensaje" name="mensaje" required></ion-textarea>
     </ion-item>
 
-
-    <!-- Botón de enviar -->
-    <ion-button color="warning" (click)="irPagina()">Enviar</ion-button>
+    <div class="btn-enviar">
+      <ion-button color="light" (click)="irPagina()">Enviar</ion-button>
+    </div>
   </form>
 
 
 </ion-content>
+
+<ion-footer class="btn-volver">
+  <ion-button color="light" [routerLink]="'/home'" >Volver</ion-button>
+</ion-footer>
+
+
+
+
 
 
 
